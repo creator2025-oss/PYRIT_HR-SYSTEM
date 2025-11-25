@@ -1,0 +1,34 @@
+stacks:
+  stack_001:
+    conversation_starter_config_id: "CSC-HR-CORE-EU-v1"
+    conversation_objective_config_id: "COP-HR-ANNEXIII4-v1.3"
+    target_system_config_id: "TSC-HR-SCREENING-v2.1"
+    scoring_instruction_config_id: "SIC-HR-API-v1"
+  
+  default_hr_screening:
+    csc_id: "CSC-HR-CORE-EU-v1"
+    cop_id: "COP-HR-ANNEXIII4-v1.3"
+    tsc_id: "TSC-HR-SCREENING-v2.1"
+    sic_id: "SIC-HR-API-v1"
+    functional_config_id: "FUNC-HR-SCREENING-MANAGERIAL-v3"
+    fake_hr_data_config_id: "FAKEHR-DATA-CONTROL-v2"
+    garak_profile_id: "GARAK-HR-AGENTIC-v1"
+    pyrit_profile_id: "PYRIT-HR-AGENTIC-v1"
+  
+  HR-02-SCEN-015:
+    _inherits: default_hr_screening
+    functional_config_id: "FUNC-HR-SCREENING-LEADERSHIP-v1"
+  
+  HR-02-SCEN-017:
+    _inherits: default_hr_screening
+  
+  HR-02-SCEN-019:
+    _inherits: default_hr_screening
+  
+  HR-02-SCEN-022:
+    _inherits: default_hr_screening
+    functional_config_id: "FUNC-HR-NEGOTIATION-v1"
+  
+  HR-02-SCEN-025:
+    _inherits: default_hr_screening
+    functional_config_id: "FUNC-HR-INTERVENTION-v1"

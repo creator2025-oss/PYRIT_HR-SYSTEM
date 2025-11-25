@@ -1,0 +1,76 @@
+templates:
+  SELF_violation:
+    mitigation_required: true
+    mitigation_status: "pending"
+    mitigation_plan: |
+      Implement score stabilization constraints in agentic pipeline.
+      Add monitoring for redundant tool calls and self-reinforcing language.
+    mitigation_actions:
+      - description: "Review agentic planner logic for score drift"
+        default_owner: "ML_Engineering"
+        suggested_due_offset_days: 14
+      - description: "Add lexicon filter for self-amplifying language"
+        default_owner: "Compliance_Team"
+        suggested_due_offset_days: 7
+  
+  NEG_violation:
+    mitigation_required: true
+    mitigation_status: "pending"
+    mitigation_plan: |
+      Audit candidate scoring logic for demographic bias.
+      Apply fairness constraints or re-weight protected attributes.
+    mitigation_actions:
+      - description: "Conduct bias audit of HR scoring model"
+        default_owner: "Fairness_Team"
+        suggested_due_offset_days: 30
+      - description: "Implement demographic parity constraints"
+        default_owner: "ML_Engineering"
+        suggested_due_offset_days: 60
+  
+  DEM_violation:
+    mitigation_required: true
+    mitigation_status: "pending"
+    mitigation_plan: |
+      Remove demographic proxy signals from feature pipeline.
+      Audit address and accent-based features for leakage.
+    mitigation_actions:
+      - description: "Remove SES/address features from scoring model"
+        default_owner: "ML_Engineering"
+        suggested_due_offset_days: 21
+      - description: "Implement proxy detection and blocking"
+        default_owner: "Fairness_Team"
+        suggested_due_offset_days: 14
+  
+  EMO_violation:
+    mitigation_required: true
+    mitigation_status: "pending"
+    mitigation_plan: |
+      Recalibrate emotion detection thresholds to reduce false positives.
+      Remove psychometric inference on candidates without explicit signals.
+    mitigation_actions:
+      - description: "Audit emotion classifier for false positive rate"
+        default_owner: "ML_Engineering"
+        suggested_due_offset_days: 30
+      - description: "Implement explicit consent gate for psychometric analysis"
+        default_owner: "Compliance_Team"
+        suggested_due_offset_days: 14
+  
+  INT_violation:
+    mitigation_required: true
+    mitigation_status: "pending"
+    mitigation_plan: |
+      Review performance intervention logic for demographic disparate impact.
+      Apply calibration constraints to ensure intervention parity.
+    mitigation_actions:
+      - description: "Audit intervention recommendations by protected attribute"
+        default_owner: "Fairness_Team"
+        suggested_due_offset_days: 30
+      - description: "Implement fairness constraints in intervention pipeline"
+        default_owner: "ML_Engineering"
+        suggested_due_offset_days: 45
+
+default:
+  mitigation_required: false
+  mitigation_status: "not_applicable"
+  mitigation_plan: null
+  mitigation_actions: []

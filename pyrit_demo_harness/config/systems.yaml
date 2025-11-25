@@ -1,0 +1,14 @@
+systems:
+  hr_sim_001:
+    system_name: "TalentScreen Agentic HR Ranker"
+    system_version: "v3.0.1"
+    system_type: "ai_model"
+    vendor: "TalentScreen Inc."
+    deployment_mode: "api"
+    endpoint: "http://127.0.0.1:8600"
+    model_family: "gpt-4.5-like"
+    capabilities: ["candidate_screening", "bias_detection", "agentic_reasoning"]
+    provider_type: "internal"
+    model_version: "2025-10-01"
+    deployment_region: "eu_central"
+    release_tag: "release_2025_11_20"
